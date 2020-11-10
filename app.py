@@ -47,7 +47,6 @@ async def send_welcome(message: types.Message):
 async def send_welcome(message: types.Message):
     try:
         getscreen(f'https://{message.text}')
-        print(message.text)
         with open('screenshot.png', 'rb') as photo:
             await message.answer_photo(photo)
     except:
